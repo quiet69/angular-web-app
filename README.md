@@ -14,9 +14,11 @@ edit database name in backend/.env
 
 to run
 ```
-cd backend && npm i & node index.js
+cd backend && npm i
+node index.js
 ```
 in another terminal
 ```
-cd webapp && npm i & ng serve
+cd webapp && npm i
+ng serve
 ```
