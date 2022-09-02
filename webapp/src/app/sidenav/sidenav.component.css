@@ -1,0 +1,18 @@
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+.menu-button:hover {
+    background: #073a74;
+}
+
+.active .mat-button{
+    background-color: pink;
+ }
+/* .menu-button mat-icon {
+    margin-right: 8px;
+} */

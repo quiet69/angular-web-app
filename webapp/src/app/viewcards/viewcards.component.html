@@ -1,0 +1,80 @@
+<!-- <div class="content mat-elevation-z8">
+    View Cards
+</div> -->
+
+<div  class="tableuwu">
+  <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="e.g Feb" #input>
+  </mat-form-field>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="CardsID">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Card ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.CardsID}} </td>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="EntryDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Entry Date </th>
+        <td mat-cell *matCellDef="let row"> {{row.EntryDate | date}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="Work_Type">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Work Type </th>
+        <td mat-cell *matCellDef="let row"> {{row.Work_Type}} </td>
+      </ng-container>
+  
+      <!-- Fruit Column -->
+      <ng-container matColumnDef="Premise">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Premise </th>
+        <td mat-cell *matCellDef="let row"> {{row.Premise}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+        <td mat-cell *matCellDef="let row"> {{row.Address}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="SessionName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Session Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.SessionName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Remarks">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Remarks </th>
+        <td mat-cell *matCellDef="let row"> {{row.Remarks}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="State">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
+        <td mat-cell *matCellDef="let row"> {{row.State}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="CheckedUGP">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Checked UGP </th>
+        <td mat-cell *matCellDef="let row"> {{row.CheckedUGP}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="CardUrl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Card URL </th>
+        <td mat-cell *matCellDef="let row"> {{row.CardUrl}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <tr class=" " *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>
+  

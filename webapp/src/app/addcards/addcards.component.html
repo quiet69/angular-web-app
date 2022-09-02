@@ -1,0 +1,66 @@
+<p class="headerbar">
+    <mat-toolbar color="primary">
+      <span>Add Card</span>
+    </mat-toolbar>
+</p>
+<br>
+<div class="content mat-elevation-z8">
+    <div class="owoformclass"  class="abcd" [formGroup] = "userForm" (ngSubmit)="userSubmit()">
+        <div class="dPicker">
+            
+        </div>
+        <mat-form-field appearance="fill" class="datepick">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="datepick">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        &nbsp;
+            <mat-form-field appearance="fill" class="worktype">
+                <mat-label>Work Type</mat-label>
+                <mat-select formControlName="worktypeselect">  
+                    <mat-option>-- None --</mat-option>
+                  <mat-option value="work from home">WFM</mat-option>
+                  <mat-option value="on site">Onsite</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="textip">
+                <mat-label>Fill Premise</mat-label>
+                <input matInput formControlName="premise">
+            </mat-form-field>
+            &nbsp;
+    
+            <mat-form-field appearance="fill" class="fieldip">
+                <mat-label>Address</mat-label>
+                <textarea matInput rows="1" class="owoText" formControlName="address"></textarea>
+            </mat-form-field>
+            <br>
+    
+            <mat-form-field appearance="fill" class="textip">
+                <mat-label>Fill Session</mat-label>
+                <input matInput formControlName="session">
+            </mat-form-field>
+            &nbsp;
+    
+            <mat-form-field appearance="fill" class="fieldip">
+                <mat-label>Remark</mat-label>
+                <textarea matInput rows="1" class="owoText" formControlName="remarks"></textarea>
+            </mat-form-field>
+            <br>
+    
+            <mat-form-field appearance="fill" class="textip">
+                <mat-label>Card URL</mat-label>
+                <input matInput formControlName="cardurl">
+            </mat-form-field>
+            &nbsp;
+            <div class="example-button-row">
+                <button mat-flat-button color="primary" (click) = "userSubmit()">Submit</button>
+                &nbsp;
+                <button mat-flat-button color="accent" (click)="clearForm()">Clear</button>
+              </div>
+    </div>
+</div>
+
+
+

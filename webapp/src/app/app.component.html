@@ -1,0 +1,26 @@
+<mat-toolbar class="mat-elevation-z8" color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    <button mat-flat-button class="owo-button" routerLink="" color="primary"><mat-icon>home</mat-icon> Pinnacle Consulting</button>
+</mat-toolbar>
+
+
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

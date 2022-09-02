@@ -1,0 +1,52 @@
+.content {
+    /* height: calc(100vh - 100px); */
+    height: 84%;
+    width: auto;
+    border-radius: 10px;
+    margin: 16px;
+    margin-top: -2%;
+    margin-left: 32px;
+    margin-right: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: left;
+    color: gray;
+    /* background-color: red; */
+}
+
+.owoformclass {
+    margin: 2%;
+}
+
+.abcd {
+    margin: 2%;
+    height: auto;
+    width: 100%;
+}
+
+.datepick {
+    width: 50%;
+}
+
+.fieldip {
+    width: 40%;
+    min-height: min-content;
+}
+
+.textip {
+    width: 40%;
+}
+
+.worktype {
+    width: 30%
+}
+
+.headerbar {
+    margin-left: 32px;
+    margin-top: 1.25%;
+    margin-right: 0.75%;
+}
+
+.mat-toolbar {
+    border-radius: 5px;
+}
